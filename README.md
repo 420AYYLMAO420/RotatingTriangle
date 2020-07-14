@@ -1,5 +1,3 @@
-# ExampleEngine
-This is an engine made using DirectX and C++.
-
-The goal of the engine is to provide a very simple demonstration of 2D graphics in Direct3D. The solution is composed of two projects: 
-the engine itself and the game project which only contains the entry point. The engine supports 2D rendering as well as 2D rotation on simple geometry.
+# RotatingTriangle
+This is a 2D triangle that rotates on the Z-axis. The background along with the triangle both change colors overtime.
+The repository contains two projects: an engine dll I made using DirectX and a client project which contains the entry point.
