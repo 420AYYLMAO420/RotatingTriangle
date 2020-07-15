@@ -1,5 +1,6 @@
 #pragma once
 
+#include "BuildLibrary.h"
 #include <chrono>
 
 using namespace std::chrono;

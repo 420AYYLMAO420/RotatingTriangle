@@ -39,15 +39,6 @@
     <ClInclude Include="source\Exception.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\VertexShader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\PixelShader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Graphics.cpp">
@@ -60,15 +51,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\Time.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\VertexShader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Shader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\PixelShader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

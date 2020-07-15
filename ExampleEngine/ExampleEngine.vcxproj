@@ -44,11 +44,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)binaries\</OutDir>
+    <OutDir>$(SolutionDir)ExampleGame</OutDir>
+    <IntDir>$(SolutionDir)Intermmediates\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)binaries\</OutDir>
+    <OutDir>$(SolutionDir)ExampleGame</OutDir>
+    <IntDir>$(SolutionDir)Intermmediates\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -82,10 +84,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\Graphics.cpp" />
-    <ClCompile Include="source\PixelShader.cpp" />
-    <ClCompile Include="source\Shader.cpp" />
     <ClCompile Include="source\Time.cpp" />
-    <ClCompile Include="source\VertexShader.cpp" />
     <ClCompile Include="source\WinApp.cpp" />
     <ClCompile Include="source\Window.cpp" />
   </ItemGroup>
@@ -94,10 +93,7 @@
     <ClInclude Include="source\ExampleEngine.h" />
     <ClInclude Include="source\Exception.h" />
     <ClInclude Include="source\Graphics.h" />
-    <ClInclude Include="source\PixelShader.h" />
-    <ClInclude Include="source\Shader.h" />
     <ClInclude Include="source\Time.h" />
-    <ClInclude Include="source\VertexShader.h" />
     <ClInclude Include="source\WinApp.h" />
     <ClInclude Include="source\Window.h" />
     <ClInclude Include="source\WindowsHeader.h" />

@@ -1,19 +1,19 @@
 #include "WinApp.h"
-#include "WindowsHeader.h"
-#include <chrono>
-#include <sstream>
+#include "Window.h"
+#include "Graphics.h"
 #include "Time.h"
+
 
 WinApp::WinApp(HINSTANCE& hInstance, LPWSTR NewTitle, const UINT& NewPosX, const UINT& NewPosY, const UINT& NewWidth, const UINT& NewHeight)
 {
     bQuit = FALSE;
-    WindowPanel = std::make_unique<Window>(hInstance, NewTitle, NewPosX, NewPosY, NewWidth, NewHeight);
-    GraphicsPanel = std::make_unique<Graphics>(WindowPanel.get());
+    WindowPanel = new Window(hInstance, NewTitle, NewPosX, NewPosY, NewWidth, NewHeight);
+    GraphicsPanel = new Graphics(WindowPanel);
     OnCreationFinished();
 }
 
 WinApp::~WinApp() {
-
+    delete WindowPanel, GraphicsPanel, Timer;
 }
 
 WPARAM WinApp::Run()
@@ -33,7 +33,6 @@ WPARAM WinApp::Run()
 
 void WinApp::OnCreationFinished()
 {
-    OutputDebugStringW(L"\nWindow Creation Finished");
-    Timer = std::make_unique<Time>();
+    Timer = new Time();
     Timer->Start();
 }
